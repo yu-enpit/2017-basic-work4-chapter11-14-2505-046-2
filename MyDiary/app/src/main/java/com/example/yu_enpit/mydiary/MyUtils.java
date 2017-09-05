@@ -27,6 +27,7 @@ public class MyUtils {
         opt.inJustDecodeBounds = true;
         BitmapFactory.decodeByteArray(bytes, 0, bytes.length, opt);
         int bitmapSize = 1;
+
         if((opt.outHeight * opt.outWidth) > 5000) {
             double outSize = (double) (opt.outHeight * opt.outWidth) / 500000;
             bitmapSize = (int)(Math.sqrt(outSize) + 1);
