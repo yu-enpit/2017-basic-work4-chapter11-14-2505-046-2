@@ -32,7 +32,6 @@ public class MyUtils {
             double outSize = (double) (opt.outHeight * opt.outWidth) / 500000;
             bitmapSize = (int)(Math.sqrt(outSize) + 1);
         }
-
         opt.inJustDecodeBounds = false;
         opt.inSampleSize = bitmapSize;
         Bitmap bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.length, opt);
